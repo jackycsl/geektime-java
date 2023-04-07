@@ -1,14 +1,35 @@
 class Student {
   // 成员变量
-  String name;
-  int age;
+  private String name;
+  private int age;
 
-  // 成员方法
-  public void study() {
-    System.out.println("好好学习，天天向上");
+  // 构造方法
+  public Student() {
   }
 
-  public void doHomework() {
-    System.out.println("键盘敲烂，月薪过万");
+  public Student(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // 成员方法
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void show() {
+    System.out.println(name + "," + age);
   }
 }

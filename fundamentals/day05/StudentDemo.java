@@ -1,20 +1,18 @@
 /*
-    学生测试类
- */
+    创建对象并为其成员变量赋值的两种方式
+        1:无参构造方法创建对象后使用setXxx()赋值
+        2:使用带参构造方法直接创建带有属性值的对象
+*/
 public class StudentDemo {
   public static void main(String[] args) {
-    // 创建对象
-    Student s = new Student();
+    // 无参构造方法创建对象后使用setXxx()赋值
+    Student s1 = new Student();
+    s1.setName("雄哥");
+    s1.setAge(30);
+    s1.show();
 
-    // 使用对象
-    System.out.println(s.name + "," + s.age);
-
-    s.name = "林青霞";
-    s.age = 30;
-
-    System.out.println(s.name + "," + s.age);
-
-    s.study();
-    s.doHomework();
+    // 使用带参构造方法直接创建带有属性值的对象
+    Student s2 = new Student("雄哥", 30);
+    s2.show();
   }
 }
