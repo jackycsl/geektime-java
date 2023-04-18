@@ -1,0 +1,17 @@
+# 注意这会启动我们这个训练营里面用到的所有的第三方依赖，所以会很慢
+# 而且会非常消耗性能。
+# 如果你的电脑性能比较差，那么启动的时候可能会引起卡顿，或者风扇疯狂咆哮
+# 所以你可以考虑说将部分代码复制出去另外一个 docker-compose 文件
+
+services:
+  # MySQL8
+  mysql8:
+    image: mysql:8.0.29
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./script/mysql/:/docker-entrypoint-initdb.d/
+    ports:
+      - "3306:3306"

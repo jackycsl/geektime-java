@@ -8,7 +8,7 @@ public class Demo10 {
     // 3.创建子类
     Manager m = new Manager();
     m.work();
-    Cook c = new Cook("ap002", "雄大厨", 1);
+    Cook05 c = new Cook05("ap002", "雄大厨", 1);
     c.work();
   }
 }

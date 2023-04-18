@@ -18,7 +18,7 @@ public class Test {
     System.out.println(linTao.getSalary());
     linTao.admin();
 
-    Student xugan = new Student();
+    Studen05 xugan = new Studen05();
     xugan.setName("鹏哥");
     xugan.setAge(31);
     // xugan.setSalary(1000.99); // 没有薪水属性，报错！
